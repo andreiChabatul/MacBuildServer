@@ -1,0 +1,23 @@
+.wrapper {
+    @apply max-w-5xl mx-auto flex justify-between items-start;
+}
+
+.descContainer {
+    @apply w-2/3 flex gap-11 flex-col items-start;
+}
+
+.descTitle {
+    @apply font-bold text-5xl;
+}
+
+.descText {
+    @apply font-normal text-base;
+}
+
+.image {
+    @apply w-60 h-60 rounded-full overflow-hidden;
+}
+
+.photo {
+    @apply w-full relative bottom-12;
+}
