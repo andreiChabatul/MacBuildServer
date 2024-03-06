@@ -1,0 +1,10 @@
+export const COLOR = {
+    FONT_DEFAULT: '#21243D',
+    BLUE_DEFAULT: '#00A8CC',
+    PRIMARY_BUTTON: '#FF6464',
+    LIGHT_BLUE: '#EDF7FA',
+    DARK_BLUE: '#142850',
+    LIGHT_GREY: '#8695A4',
+    BACKGROUND: '#FFFFFF',
+    BLACK: '#000000'
+}
