@@ -1,0 +1,7 @@
+.wrapper {
+    @apply bg-LIGHT_BLUE h-80 overflow-hidden;
+}
+
+.postsContainer {
+    @apply flex gap-8 items-center justify-center;
+}
