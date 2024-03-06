@@ -1,0 +1,9 @@
+.wrapper {
+    @apply px-5 py-2 rounded-md bg-PRIMARY_BUTTON text-BACKGROUND font-medium text-base duration-300;
+
+    &:hover {
+        @apply bg-HOVER_BUTTON;
+    }
+
+
+}
