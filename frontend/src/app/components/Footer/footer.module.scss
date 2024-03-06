@@ -1,0 +1,24 @@
+.wrapper {
+    @apply grid grid-cols-3;
+}
+
+.container {
+    @apply justify-self-center col-start-2;
+}
+
+.text {
+    @apply font-normal text-sm;
+}
+
+.containerLink {
+    @apply flex gap-4 items-center justify-center mb-2;
+
+    a {
+        @apply text-2xl duration-300 inline-block;
+
+        &:hover {
+            @apply text-BLUE_DEFAULT transform -translate-y-1;
+
+        }
+    }
+}
