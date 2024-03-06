@@ -1,0 +1,36 @@
+.wrapper {
+    @apply flex gap-3 font-medium text-BLACK text-xl relative;
+
+    li {
+        @apply cursor-pointer duration-300;
+
+        &:hover {
+            @apply text-BLUE_DEFAULT;
+        }
+    }
+}
+
+.wrapper_burger {
+    @apply flex-col-reverse w-full bg-BACKGROUND fixed top-0 left-0 p-5 z-10 duration-500 border-solid border-BORDER_COLOR border-b-2;
+    transform: translateY(-250px)
+}
+
+.wrapper_burger__open {
+    @apply transform translate-y-0;
+}
+
+.burgerIco {
+    @apply text-4xl cursor-pointer duration-300;
+
+    &:hover {
+        @apply text-BLUE_DEFAULT;
+    }
+}
+
+.close {
+    @apply absolute top-5 right-5 z-40 duration-300 cursor-pointer;
+
+    &:hover {
+        @apply text-BLUE_DEFAULT;
+    }
+}

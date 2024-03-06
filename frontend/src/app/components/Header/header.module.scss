@@ -1,19 +1,14 @@
 .wrapper {
     @apply flex justify-between items-center py-4 px-10;
+
+    @media screen and (max-width: 500px) {
+        @apply px-4;
+    }
 }
 
 .logo {
     @apply rounded-lg;
 }
 
-.navWrapper {
-    @apply flex gap-3 font-medium text-BLACK text-xl;
 
-    li {
-        @apply cursor-pointer duration-300;
 
-        &:hover {
-            @apply text-BLUE_DEFAULT;
-        }
-    }
-}
