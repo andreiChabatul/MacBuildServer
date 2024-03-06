@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import "./globals.scss";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const font = Heebo({
   subsets: ["latin", "hebrew"],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-heebo'
+  variable: '--font-heebo',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

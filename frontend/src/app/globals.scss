@@ -3,3 +3,8 @@
 @tailwind utilities;
 @import 'scss-reset/reset';
 
+@layer base {
+    body {
+        @apply text-FONT_DEFAULT flex flex-col justify-between gap-16;
+    }
+}
