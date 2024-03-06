@@ -11,7 +11,7 @@ export default function SectionTwo() {
 
     return <section className={styles.wrapper}>
         <div className={styles.header}>
-            <p>Recent posts</p>
+            <h3>Recent posts</h3>
             <a href="">View all</a>
         </div>
         <ul className={styles.postsContainer}>

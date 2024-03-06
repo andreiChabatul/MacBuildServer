@@ -7,5 +7,6 @@ export const COLOR = {
     DARK_BLUE: '#142850',
     LIGHT_GREY: '#8695A4',
     BACKGROUND: '#FFFFFF',
-    BLACK: '#000000'
+    BLACK: '#000000',
+    BORDER_COLOR: '#E0E0E0'
 }
