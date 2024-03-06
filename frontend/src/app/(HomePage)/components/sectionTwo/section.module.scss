@@ -1,17 +1,24 @@
 .wrapper {
-    @apply bg-LIGHT_BLUE h-80 overflow-hidden;
+    @apply bg-LIGHT_BLUE pb-8;
 }
 
 .postsContainer {
     @apply flex gap-8 items-center justify-center;
+
+    @media screen and (max-width: 850px) {
+        @apply flex-col;
+    }
 }
 
 .header {
     @apply flex justify-between px-40 py-4 font-normal;
 
-    
-
     a {
-        @apply text-BLUE_DEFAULT text-base; 
+        @apply text-BLUE_DEFAULT text-base;
     }
+
+    @media screen and (max-width: 1000px) {
+        @apply px-10
+    }
+
 }

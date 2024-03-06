@@ -1,8 +1,7 @@
 'use client'
 
-export const SCREEN_XL = 900;
-export const SCREEN_XXL = 1400;
-export const SCREEN_XXXL = 1700;
+const SCREEN_XXL = 1400;
+const SCREEN_XXXL = 1700;
 
 import { useState, useEffect } from 'react';
 
@@ -29,7 +28,6 @@ export const useResize = () => {
     function calcAmount(width: number) {
         if (width > SCREEN_XXXL) return 4;
         if (width < SCREEN_XXXL && width > SCREEN_XXL) return 3;
-        if (width < SCREEN_XXL && width > SCREEN_XL) return 2;
-        return 1;
+        return 2;
     }
 };

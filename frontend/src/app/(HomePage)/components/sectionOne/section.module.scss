@@ -1,13 +1,25 @@
 .wrapper {
     @apply max-w-5xl mx-auto flex justify-between items-start;
+
+    @media screen and (max-width: 700px) {
+        @apply flex-col-reverse items-center gap-6;
+    }
 }
 
 .descContainer {
     @apply w-2/3 flex gap-11 flex-col items-start;
+
+    @media screen and (max-width: 700px) {
+        @apply items-center w-11/12 text-center;
+    }
 }
 
 .descTitle {
     @apply font-bold text-5xl;
+
+    @media screen and (max-width: 700px) {
+        @apply text-3xl ;
+    }
 }
 
 .descText {

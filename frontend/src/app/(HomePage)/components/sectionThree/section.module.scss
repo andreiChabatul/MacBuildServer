@@ -1,4 +1,11 @@
 .wrapper {
     @apply px-40;
+
+    @media screen and (max-width: 1000px) {
+        @apply px-10
+    }
+    
 }
+
+
 

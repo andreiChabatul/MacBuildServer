@@ -2,12 +2,24 @@
     @apply bg-BACKGROUND w-96 h-60 rounded-md p-5 grid gap-2;
     grid-template-rows: 1fr min-content 1fr;
     box-shadow: 0px 4px 10px 0px;
+
+    @media screen and (max-width: 450px) {
+        @apply w-80 h-auto;
+    }
+
+    @media screen and (max-width: 400px) {
+        @apply w-72 h-auto;
+    }
 }
 
 .title {
-    @apply font-bold text-2xl
+    @apply font-bold text-2xl;
 }
 
 .info {
     @apply flex gap-7 text-lg font-normal;
+
+    @media screen and (max-width: 450px) {
+        @apply text-base;
+    }
 }
