@@ -1,0 +1,36 @@
+.wrapper {
+    @apply bg-LIGHT_BLUE w-96 flex flex-col justify-between items-center p-5 gap-6 rounded-lg;
+}
+
+.title {
+    @apply font-bold text-2xl;
+}
+
+.inputContainer {
+    @apply relative w-80 h-20;
+}
+
+.input {
+    @apply w-full h-10 px-2 rounded-lg;
+}
+
+.error {
+    @apply absolute text-red-600;
+    bottom: -10px;
+}
+
+.label {
+    @apply text-lg font-semibold;
+}
+
+.buttonsContainer {
+    @apply flex justify-between w-full items-end;
+}
+
+.linkPage {
+    @apply cursor-pointer duration-300;
+
+    &:hover {
+        @apply text-BLUE_DEFAULT;
+    }
+}
