@@ -6,8 +6,8 @@ export default function SectionThree() {
     return <section className={styles.wrapper}>
         <h3 className='mb-5'>Featured works</h3>
         <ul>
-            {POSTS.map((item) =>
-                <li>
+            {POSTS.map((item, index) =>
+                <li key={index}>
                     <ItemPost{...item} />
                 </li>)}
         </ul>

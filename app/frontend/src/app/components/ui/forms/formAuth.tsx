@@ -6,12 +6,15 @@ import Button from '../button/Button';
 import { typeInputs, typePropsForm } from '@/types/formAuth';
 import { NAME_FORM } from './const/const';
 import { useRouter } from 'next/navigation';
+import { useAppDispatch } from '@/lib/hooks';
+import { fetchAuth } from '@/lib/thunk/thunk.auth';
 
 
 export default function FormAuth({ type }: typePropsForm) {
 
     const rexExpEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const router = useRouter();
+    const dispatch = useAppDispatch();
 
     const {
         register,
@@ -19,7 +22,8 @@ export default function FormAuth({ type }: typePropsForm) {
         formState: { errors },
     } = useForm<typeInputs>()
 
-    const onSubmit: SubmitHandler<typeInputs> = (data) => console.log(data)
+    const onSubmit: SubmitHandler<typeInputs> = (user) =>
+        dispatch(fetchAuth({ user, type }));
 
     return <form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
         <h3 className={styles.title}>{NAME_FORM[type]}</h3>

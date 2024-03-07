@@ -1,23 +1,14 @@
 import { typeForm, typeInputs } from "@/types/formAuth";
-import axios, { type CreateAxiosDefaults } from "axios";
+import axios from "axios";
 
-export default function UserService() {
+export const UserService = {
 
-    const options: CreateAxiosDefaults = {
-        baseURL: process.env.URL_BACKEND
+    async sendRequest(user: typeInputs, type: typeForm) {
+        const URL = process.env.URL_BACKEND || 'http://localhost:4200/api/auth/'
+
+        const response = await axios.post(`${URL}${type}`, user);
+        console.log(response, 'res')
+        return response.data;
     }
-    const axiosBasic = axios.create(options);
-
-
-    function sendRequest(user: typeInputs, type: typeForm): void {
-
-
-        axiosBasic.post('login')
-    }
-
-
-
-
-
 
 }
