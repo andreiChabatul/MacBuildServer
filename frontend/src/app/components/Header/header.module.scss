@@ -7,7 +7,11 @@
 }
 
 .logo {
-    @apply rounded-lg;
+    @apply rounded-lg cursor-pointer opacity-85 duration-300;
+
+    &:hover {
+        @apply opacity-100
+    }
 }
 
 

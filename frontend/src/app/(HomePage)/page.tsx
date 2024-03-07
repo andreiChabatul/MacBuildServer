@@ -10,5 +10,4 @@ export default function HomePage() {
         <SectionThree />
     </main>
 
-
 }
