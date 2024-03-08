@@ -1,3 +1,5 @@
+'use client'
+
 import FormAuth from "@/app/components/ui/forms/formAuth";
 import styles from "./register.module.scss";
 

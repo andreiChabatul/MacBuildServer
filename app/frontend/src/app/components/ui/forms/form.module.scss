@@ -1,5 +1,9 @@
 .wrapper {
     @apply bg-LIGHT_BLUE w-96 flex flex-col justify-between items-center p-5 gap-6 rounded-lg;
+
+    @media screen and (max-width: 500px) {
+        @apply w-80;
+    }
 }
 
 .title {
@@ -8,6 +12,10 @@
 
 .inputContainer {
     @apply relative w-80 h-20;
+
+    @media screen and (max-width: 500px) {
+        @apply w-auto;
+    }
 }
 
 .input {
