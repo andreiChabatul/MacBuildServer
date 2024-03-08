@@ -3,11 +3,10 @@ import axios from "axios";
 
 export const UserService = {
 
-    async sendRequest(user: typeInputs, type: typeForm) {
-        const URL = process.env.URL_BACKEND || 'http://localhost:4200/api/auth/'
+    BASE_URL: 'http://localhost:4200/api/auth/',
 
-        const response = await axios.post(`${URL}${type}`, user);
-        console.log(response, 'res')
+    async sendRequest(user: typeInputs, type: typeForm) {
+        const response = await axios.post(`${this.BASE_URL}${type}`, user);
         return response.data;
     }
 

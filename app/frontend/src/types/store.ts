@@ -1,7 +1,5 @@
 export type typeStore = {
     user: typeUser,
-    status: "idle" | "loading" | "succeeded" | "failed",
-    error: string
 }
 
 export type typeUser = {

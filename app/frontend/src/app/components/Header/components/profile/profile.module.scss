@@ -1,0 +1,11 @@
+.text {
+    @apply flex items-center gap-2 relative cursor-pointer duration-300;
+
+    &:hover {
+        @apply text-BLUE_DEFAULT;
+    }
+}
+
+.profileWindow {
+    @apply absolute p-5 bg-LIGHT_BLUE rounded-lg top-0 right-0 flex flex-col justify-between gap-3 z-50;
+}

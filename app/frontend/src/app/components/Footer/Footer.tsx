@@ -5,8 +5,8 @@ export default function Footer() {
     return <footer className={styles.wrapper}>
         <div className={styles.container}>
             <ul className={styles.containerLink}>
-                {FOOTER_DATA.map((item) =>
-                    <li>
+                {FOOTER_DATA.map((item, index) =>
+                    <li key={index}>
                         <a href={item.link}><item.icon /></a>
                     </li>
                 )}

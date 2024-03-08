@@ -4,6 +4,7 @@ import "./globals.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import StoreProvider from "./StoreProvider";
+import { Toaster } from "sonner";
 
 const font = Heebo({
   subsets: ["latin", "hebrew"],
@@ -27,7 +28,10 @@ export default function RootLayout({
         <body className={font.className}>
           <Header />
           {children}
-          <Footer />
+          <div>
+            <Footer />
+            <Toaster richColors />
+          </div>
         </body>
       </html>
     </StoreProvider>

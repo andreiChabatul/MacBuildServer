@@ -4,13 +4,17 @@ import { useClickOutside } from '../../hooks/useClickOutside';
 import styles from './menu.module.scss';
 import { IoMenu } from "react-icons/io5";
 import { VscChromeClose } from "react-icons/vsc";
+import Profile from '../profile/Profile';
+import { useAppSelector } from '@/lib/hooks';
+import { RiLoginBoxLine } from "react-icons/ri";
 
 export default function Menu() {
 
     const { isShowBurger } = useShowBurger();
     const menuref = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
-    useClickOutside(menuref, () => setIsOpen(false))
+    useClickOutside(menuref, () => setIsOpen(false));
+    const email = useAppSelector((state) => state.user.user.email);
 
     return <div>
         {isShowBurger && <IoMenu className={styles.burgerIco} onClick={() => setIsOpen(true)} />}
@@ -19,7 +23,8 @@ export default function Menu() {
                 <li>Works</li>
                 <li>Blog</li>
                 <li>Contact</li>
-                <li>Profile</li>
+                {!email && <li> <a href='/auth/login' className={styles.login}>Войти <RiLoginBoxLine /></a></li>}
+                {email && <Profile />}
                 {(isOpen && isShowBurger) && <VscChromeClose className={styles.close} onClick={() => setIsOpen(false)} />}
             </ul>
 

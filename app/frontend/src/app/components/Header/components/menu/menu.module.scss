@@ -34,3 +34,7 @@
         @apply text-BLUE_DEFAULT;
     }
 }
+
+.login {
+    @apply flex items-center gap-2;
+}

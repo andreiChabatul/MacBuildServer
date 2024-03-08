@@ -5,7 +5,6 @@ import styles from './header.module.scss';
 import Menu from "./components/menu/Menu";
 import { useRouter } from "next/navigation";
 
-
 export default function Header() {
 
     const router = useRouter();
